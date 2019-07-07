@@ -84,6 +84,7 @@ const shellSort = (arr, type) => {
     }
     return type ? arr : arr.reverse()
 }
+
 //快速排序
 const quicksort = (arr, type) => {
     const f = arr => {
