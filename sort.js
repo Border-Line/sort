@@ -5,10 +5,8 @@ const bubble = (arr, type) => {
     let count = 1
     while (count < len - 1) {
         for (let i = 0; i < len - count; i++) {
-            if ((arr[i] < arr[i + 1] && !type) ||
-                (arr[i] > arr[i + 1] && type)) {
-                [arr[i], arr[i + 1]] = [arr[i + 1],
-                arr[i]]
+            if ((arr[i] < arr[i + 1] && !type) || (arr[i] > arr[i + 1] && type)) {
+                [arr[i], arr[i + 1]] = [arr[i + 1], arr[i]]
             }
         }
         count++
@@ -21,10 +19,8 @@ const insert = (arr, type) => {
     const len = arr.length
     for (let i = 1; i < len; i++) {
         for (let j = 0; j < i; j++) {
-            if ((arr[j] > arr[i] && type) || arr[j]
-                < arr[i] && !type) {
-                arr.splice(j, 0, arr.splice(i, 1)
-                [0])
+            if ((arr[j] > arr[i] && type) || arr[j] < arr[i] && !type) {
+                arr.splice(j, 0, arr.splice(i, 1) [0])
                 break
             }
         }
@@ -111,8 +107,7 @@ const select = (arr, type) => {
                 mIdx = j
             }
         }
-        [arr[mIdx], arr[i]] = [arr[i],
-        arr[mIdx]]
+        [arr[mIdx], arr[i]] = [arr[i], arr[mIdx]]
     }
     return type ? arr : arr.reverse()
 }
