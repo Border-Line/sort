@@ -124,7 +124,7 @@ const merge = (left, right) => {
     if (left.length) {
         arr = [...arr, ...left]
     }
-    if (right - length) {
+    if (right.length) {
         arr = [...arr, ...right]
     }
     return arr
